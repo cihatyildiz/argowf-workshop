@@ -95,10 +95,11 @@ steps:
   - - name: loop-step
       template: loop-step-template
       withParam: "{{steps.loop.outputs.parameters.iterations}}"
+```
 
 ## Workflow Outputs:
 
-Passing Outputs to Next Step:
+###Passing Outputs to Next Step:
 ```yaml
 steps:
   - - name: step1
@@ -113,7 +114,8 @@ steps:
         parameters:
           - name: my-input
             value: "{{steps.step1.outputs.parameters.my-output}}"
-Advanced Features:
+```
+## Advanced Features:
 
 DAG Workflows: Argo Workflows supports defining complex Directed Acyclic Graph (DAG) workflows using the dag template.
 Sub-Workflows: Argo allows defining reusable sub-workflows to encapsulate and reuse common logic.
